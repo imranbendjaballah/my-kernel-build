@@ -5,14 +5,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Build Android Kernel
-        uses: dabao1955/kernel_build_action@v1.10.1
+        uses: dabao1955/kernel_build_action@main # استخدمنا main لتجنب خطأ v1.10.1
         with:
           kernel-url: https://github.com/imranbendjaballah/android_kernel_xiaomi_mt6768
           kernel-branch: twelve
