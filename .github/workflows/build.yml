@@ -1,13 +1,5 @@
-name: Build Kernel
-on:
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
       - name: Build Android Kernel
-        uses: dabao1955/kernel-build-action@main
+        uses: dabao1955/kernel_build_action@v1.9.2
         with:
           kernel-url: https://github.com/imranbendjaballah/android_kernel_xiaomi_mt6768
           kernel-branch: twelve
