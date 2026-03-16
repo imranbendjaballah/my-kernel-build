@@ -1,0 +1,19 @@
+name: Build Kernel
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Android Kernel
+        uses: dabao1955/kernel-build-action@v1.9.2
+        with:
+          # استبدل USER باسم حسابك على جيت هاب
+          kernel-url: https://github.com/USER/android_kernel_xiaomi_mt6768.git
+          kernel-branch: twelve
+          config: lancelot_defconfig
+          arch: arm64
+          compiler: clang
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
