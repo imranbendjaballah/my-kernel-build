@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Android Kernel
-        uses: dabao1955/kernel-build-action@v1.9.2
+        uses: dabao1955/kernel-build-action@main
         with:
-          # استبدل USER باسم حسابك على جيت هاب
-          kernel-url: https://github.com/USER/android_kernel_xiaomi_mt6768.git
+          kernel-url: https://github.com/imranbendjaballah/android_kernel_xiaomi_mt6768
           kernel-branch: twelve
           config: lancelot_defconfig
           arch: arm64
